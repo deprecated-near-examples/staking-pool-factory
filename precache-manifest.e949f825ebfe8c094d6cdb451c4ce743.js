@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "69e1e358d633a78cdf1aeab50827d18c",
+    "revision": "44cf94c5f9bab6cc76a7ba8233642baa",
     "url": "/staking-pool-factory/index.html"
   },
   {
-    "revision": "b3a15fa0738edf77b828",
+    "revision": "d6d167b5ff15a028d557",
     "url": "/staking-pool-factory/static/css/main.27fd15f6.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/staking-pool-factory/static/js/2.14beee9d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b3a15fa0738edf77b828",
-    "url": "/staking-pool-factory/static/js/main.b893ea83.chunk.js"
+    "revision": "d6d167b5ff15a028d557",
+    "url": "/staking-pool-factory/static/js/main.174a1e27.chunk.js"
   },
   {
     "revision": "485aacc987f2eb4c4062",
