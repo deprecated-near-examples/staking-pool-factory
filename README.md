@@ -8,11 +8,13 @@ Once the staking pool is created the owner of the staking pool can immediately d
 
 ## Contracts background
 
-The current frontend is deployed on the `betanet` and uses the account `stakehouse.betanet`
-Requires an account deployed on the network with the contract binary located at https://github.com/near/initial-contracts/raw/master/staking-pool-factory/res/staking_pool_factory.wasm
+The current frontend is deployed on NEAR `betanet` network and uses the account `stakehouse.betanet`.
 
-The factory is initialized with the whitelist contract at account `whitelist-beta` with binary https://github.com/near/initial-contracts/raw/master/whitelist/res/whitelist.wasm
+The factory uses contract from https://github.com/near/initial-contracts/tree/master/staking-pool-factory
 
+The factory is initialized to use the whitelist contract deployed at the account `whitelist-beta`
+
+Whitelist contract is https://github.com/near/initial-contracts/tree/master/whitelist
 
 ### Install dependencies
 
