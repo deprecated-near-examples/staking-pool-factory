@@ -47,6 +47,8 @@ class App extends React.Component {
         ownerId: this._accountId,
       })
     })
+
+    this._minAttachedBalance = "30000000000000000000000000";
   }
 
   async _initYourStakingPool() {
@@ -244,14 +246,6 @@ class App extends React.Component {
                 onClick={() => this.logOut()}>Log out</button>
           </div>
           <h4>Hello, <span className="font-weight-bold">{this.state.accountId}</span>!</h4>
-          <p>
-            Create and deploy a new staking pool. It'll cost you <span className="font-weight-bold">{fromYocto(this._minAttachedBalance)} Ⓝ</span> to cover storage fees on the new staking pool.
-          </p>
-          <p>
-            Staking Pool allows users to delegate tokens in a secure way. Once the staking pool is created, the owner of the staking pool
-            should run the validation node on the behalf of the staking pool account. If the staking pool accumulates enough stake to
-            qualify for a validator seat, then all participants of this staking pool will split the staking rewards from the pool.
-          </p>
           <div className="form-group">
             <label forhtml="stakingPoolId">Staking Pool ID</label>
             <div className="input-group">
@@ -270,7 +264,12 @@ class App extends React.Component {
                 <div className="input-group-text">.{ContractName}</div>
               </div>
             </div>
-            <small>It'll be used to uniquely identify the staking pool and to create an Account ID for the staking pool</small>
+            <small>It'll be used to uniquely identify the staking pool and to create an Account ID for the staking pool.<br/>
+              {this.isValidStakingPoolId(this.state.stakingPoolId) && (
+                <span>The staking pool account ID will be <strong>@{this.state.stakingPoolId}.{ContractName}</strong></span>
+              )}
+            </small>
+
           </div>
 
           <div className="form-group">
@@ -334,7 +333,9 @@ class App extends React.Component {
                      onChange={(e) => this.handleChange('denominator', e.target.value)}
               />
             </div>
-            <small>The initial staking public key that the staking pool will use to issue staking transaction.</small>
+            <small>The initial reward fee fraction that the owner of the pool will take from the rewards. The reward fee can be from 0% to 100%.<br/>
+            Your initial reward fee will be <strong>{(this.state.rewardFeeFraction.numerator * 100/ this.state.rewardFeeFraction.denominator).toFixed(2) + "%"}</strong>
+            </small>
           </div>
 
 
@@ -353,7 +354,6 @@ class App extends React.Component {
                   onClick={() => this.createStakingPool()}>Create Staking Pool {this.isValidStakingPoolId(this.state.stakingPoolId) && `@${this.state.stakingPoolId}.${ContractName}`} ({fromYocto(this._minAttachedBalance)} Ⓝ)</button>
             </div>
           </div>
-          <hr/>
         </div>
     ) : (
         <div>
@@ -363,8 +363,16 @@ class App extends React.Component {
         </div>
     ));
     return (
-        <div>
+        <div className="px-5">
           <h1>Staking Pool Factory (betanet)</h1>
+          <p>
+            Create and deploy a new staking pool. It'll cost you <span className="font-weight-bold">{fromYocto(this._minAttachedBalance)} Ⓝ</span> to cover storage fees on the new staking pool.
+          </p>
+          <p>
+            Staking Pool allows users to delegate tokens in a secure way. Once the staking pool is created, the owner of the staking pool
+            should run the validation node on the behalf of the staking pool account. If the staking pool accumulates enough stake to
+            qualify for a validator seat, then all participants of this staking pool will split the staking rewards from the pool.
+          </p>
           {
             this.state.yourStakingPoolAccountId && (
               this.state.poolSuccess ? (
