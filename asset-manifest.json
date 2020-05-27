@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/staking-pool-factory/static/css/main.27fd15f6.chunk.css",
+    "main.js": "/staking-pool-factory/static/js/main.b893ea83.chunk.js",
+    "main.js.map": "/staking-pool-factory/static/js/main.b893ea83.chunk.js.map",
+    "runtime-main.js": "/staking-pool-factory/static/js/runtime-main.fb6f3627.js",
+    "runtime-main.js.map": "/staking-pool-factory/static/js/runtime-main.fb6f3627.js.map",
+    "static/js/2.14beee9d.chunk.js": "/staking-pool-factory/static/js/2.14beee9d.chunk.js",
+    "static/js/2.14beee9d.chunk.js.map": "/staking-pool-factory/static/js/2.14beee9d.chunk.js.map",
+    "index.html": "/staking-pool-factory/index.html",
+    "precache-manifest.c1535f9b7240efd4a6fa13ffb7c20ce3.js": "/staking-pool-factory/precache-manifest.c1535f9b7240efd4a6fa13ffb7c20ce3.js",
+    "service-worker.js": "/staking-pool-factory/service-worker.js",
+    "static/css/main.27fd15f6.chunk.css.map": "/staking-pool-factory/static/css/main.27fd15f6.chunk.css.map",
+    "static/js/2.14beee9d.chunk.js.LICENSE.txt": "/staking-pool-factory/static/js/2.14beee9d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fb6f3627.js",
+    "static/js/2.14beee9d.chunk.js",
+    "static/css/main.27fd15f6.chunk.css",
+    "static/js/main.b893ea83.chunk.js"
+  ]
+}
