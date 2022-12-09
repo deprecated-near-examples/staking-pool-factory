@@ -1,4 +1,6 @@
-# [Staking Pool Factory Frontend](https://near-examples.github.io/staking-pool-factory/)
+# ⚠️⛔ DEPRECATED
+
+> This project is not being actively supported, the code is not expected to work nor reflects the latests improvements in our tooling stack
 
 Frontend for the staking pool factory deployed on the NEAR betanet.
 
